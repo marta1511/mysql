@@ -21,6 +21,6 @@ vrsta int
 alter table kontakt add foreign key (vrsta) references vrsta (sifra);
 
 insert into vrsta (naziv) values ('mobitel'), ('kućni_telefon');
-insert into kontakt (ime,prezime,broj,vrsta) values ('leo','maras','0998752452',1), ('ante','anić','031583694',2), ('lana','barić','0915236478',1);
+insert into kontakt (ime,prezime,broj,vrsta) values ('leo','maras','0998752452',1), ('ante','anić','031583694',2), ('lana','barić','0915236478',1), ('lovro','lovrić',1,'095876321');
 
 
