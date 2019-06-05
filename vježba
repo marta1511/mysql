@@ -1,0 +1,22 @@
+SELECT *FROM katalog WHERE naslov LIKE '%ljubav%'
+AND sifra IN (2660,2664,2879,2938);
+
+SELECT a.sifra, b.ime, b.prezime, c.naziv, d.naziv AS mjesto
+FROM kazalog a INNER JOIN autor b 
+ON a.autor=b.sifra
+INNER JOIN izdavac c 
+ON a.izdavac=c.sifra
+INNER JOIN mjesto d 
+ON a.mjesto=d.sifra
+WHERE a.naslov LIKE '%ljubav%'
+AND sifra IN (2660,2664,2879,2938);
+
+SELECT *FROM mjesto WHERE postanskiBroj IS NOT NULL;
+SELECT naziv FROM mjesto WHERE postanskiBroj<2000 or postanskiBroj>3000;
+
+SELECT *FROM mjesto WHERE naziv LIKE 'y%';
+
+SELECT *FROM autor WHERE datumRodenja='1980-12-07';
+select *from izdavac;
+
+SELECT *FROM izdavac WHERE naziv LIKE '%.' AND aktivan='1';
