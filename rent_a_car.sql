@@ -29,7 +29,7 @@ ime varchar(50) not null,
 prezime varchar(50) not null,
 email varchar (50) not null, 
 telefon varchar (13) not null,
-broj_vozacke varchar (15) not null
+broj_vozacke varchar (8) not null
 );
 
 create table zaposlenik (
@@ -56,6 +56,10 @@ alter table iznajmljivanje add foreign key (klijent) references klijent(sifra);
 alter table iznajmljivanje add foreign key (vozilo) references vozilo(sifra);
 alter table iznajmljivanje add foreign key (zaposlenik) references zaposlenik(sifra);
 
+
+
+
+
 insert into model (naziv, marka, tip, broj_sjedala,vrsta_motora,automatik,godina_proizvodnje,cijena_po_danu) values
 #1
  ('Opel Karl','Opel','1.0 Easytronic',4,'Benzin',0,'2017',430.00),
@@ -64,13 +68,13 @@ insert into model (naziv, marka, tip, broj_sjedala,vrsta_motora,automatik,godina
 #3
  ('Opel Corsa','Opel','1.3CDTI',4,'Diesel',0,'2010',320.00),
 #4
- ('Opel Adam Open Air','Opel','1.4 Easytronic',4,'Benzin',1,'2017',450.00),
+ ('Opel Adam','Opel','1.4 Easytronic',4,'Benzin',1,'2017',450.00),
 #5
  ('Opel Vivaro','Opel','2.0 TDI',9,'Diesel',0,'2013',1250.00),
 #6
- ('Renault Clio','Renaul',5,'Diesel',0,'2015',300.00), 
+ ('Renault Clio','Renaul','	dCi 75',5,'Diesel',0,'2015',300.00), 
 #7
- ('Renault Clio','Renaul',5,'Diesel',0,'2014',280.00), 
+ ('Renault Clio','Renaul','1,5 dCi',5,'Diesel',0,'2014',280.00), 
 #8
  ('Golf VII','VW','1.6 TDI BMT',5,'Diesel',0,'2014',350.00),
 #9
@@ -108,7 +112,7 @@ insert into model (naziv, marka, tip, broj_sjedala,vrsta_motora,automatik,godina
 #25
 ('Ford Fiesta ','Ford','1.0 i',5, 'Benzin',0,'2012',270.00),
 #26
-('Ford C-Max ','Ford','1.6',5, 'Benzin',0,'2012',320.00),
+('Ford Cmax ','Ford','1.6',5, 'Benzin',0,'2012',320.00),
 #27
 ('Ford Transit','Ford','1.6 TDCI',5, 'Diesel',0,'2015',950.00),
 #28
@@ -117,6 +121,7 @@ insert into model (naziv, marka, tip, broj_sjedala,vrsta_motora,automatik,godina
 ('BMW serija 5','BMW','3.0 d',5, 'Diesel',1,'2014',850.00),
 #30
 ('Mini O ne ','Mini','1.8 ',5, 'Diesel',0,'2011',500.00);
+
 
 
 
@@ -154,8 +159,8 @@ insert into vozilo (registracijska_oznaka,datum_registracije,model) values
 ('OS-611-PL','2019-03-06',30);
 
 
-insert into (ime,prezime,email,telefon,broj_vozacke) values
-('Marko', 'Anić','marko038@gmail.com','099875632','00003258'), 
+insert into klijent (ime,prezime,email,telefon,broj_vozacke) values
+('Marko','Anić','marko038@gmail.com','099875632','00003258'), 
 ('Luka','Marić','lukamaric@gmail.com','0958753298','02203256'),
 ('Ana','Marinović','ancica@gmail.com','0913654123','12386658'),
 ('Elizabet','Deljak','elizadeljak02@hotmail.com','0993546987','89562314'),
