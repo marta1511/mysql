@@ -9,7 +9,7 @@ sifra int not null primary key auto_increment,
 naziv varchar(50) not null,
 marka varchar(50) not null,
 tip varchar(50) not null,
-broj_sjedala int, 
+broj_sjedala int not null, 
 vrsta_motora varchar(50) not null,
 automatik boolean not null, 
 godina_proizvodnje year not null,
@@ -58,65 +58,65 @@ alter table iznajmljivanje add foreign key (zaposlenik) references zaposlenik(si
 
 insert into model (naziv, marka, tip, broj_sjedala,vrsta_motora,automatik,godina_proizvodnje,cijena_po_danu) values
 #1
- ('Opel Karl','Opel','1.0 Easytronic','4','Benzin','0','2017','430.00'),
+ ('Opel Karl','Opel','1.0 Easytronic',4,'Benzin',0,'2017',430.00),
 #2
- ('Opel Karl','Opel','1.0 Easytronic','4','Benzin','0','2017','430.00'),
+ ('Opel Insignia','Opel','2,0 CDTI',5,'Diesel',0,'2015',430.00),
 #3
- ('Opel Corsa','Opel','1.3CDTI','4','Diesel','0','2010','320.00'),
+ ('Opel Corsa','Opel','1.3CDTI',4,'Diesel',0,'2010',320.00),
 #4
- ('Opel Adam Open Air','Opel','1.4 Easytronic','4','Benzin','1','2017','450.00'),
+ ('Opel Adam Open Air','Opel','1.4 Easytronic',4,'Benzin',1,'2017',450.00),
 #5
- ('Opel Vivaro','Opel','2.0 TDI','9','Diesel','0','2013','1250.00'),
+ ('Opel Vivaro','Opel','2.0 TDI',9,'Diesel',0,'2013',1250.00),
 #6
- ('Renault Clio','Renaul','5','Diesel','0','2015','300.00'), 
+ ('Renault Clio','Renaul',5,'Diesel',0,'2015',300.00), 
 #7
- ('Renault Clio','Renaul','5','Diesel','0','2014','280.00'), 
+ ('Renault Clio','Renaul',5,'Diesel',0,'2014',280.00), 
 #8
- ('Golf VII','VW','1.6 TDI BMT','5','Diesel','0','2014','350.00'),
+ ('Golf VII','VW','1.6 TDI BMT',5,'Diesel',0,'2014',350.00),
 #9
- ('Golf VII','VW','1.6 TDI BMT','5','Diesel','0','2016','450.00'),
+ ('Golf VII','VW','1.6 TDI BMT',5,'Diesel',0,'2016',450.00),
 #10
- ('Golf VI','VW','1.6 TDI BMT','5','Diesel','0','2012','300.00'),
+ ('Golf VI','VW','1.6 TDI BMT',5,'Diesel',0,'2012',300.00),
 #11
- ('Polo','VW','1.2 TDI','5','Diesel','0','2013','290.00'),
+ ('Polo','VW','1.2 TDI',5,'Diesel',0,'2013',290.00),
 #12
- ('Polo','VW','1.2 TDI','5','Diesel','0','2012','230.00'),
+ ('Polo','VW','1.2 TDI',5,'Diesel',0,'2012',230.00),
 #13
- ('Passat','VW','2.0 TDI','5','Diesel','0','2016','700.00'),
+ ('Passat','VW','2.0 TDI',5,'Diesel',0,'2016',700.00),
 #14
- ('Audi A4','AUDI','2.0 TDI','5','Diesel','0','2013','600.00'),
+ ('Audi A4','AUDI','2.0 TDI',5,'Diesel',0,'2013',600.00),
 #15
- ('Audi A1','AUDI','1.9 TDI','5','Diesel','0','2014','500.00'),
+ ('Audi A1','AUDI','1.9 TDI',5,'Diesel',0,'2014',500.00),
 #16
- ('Audi A6','AUDI','3.0 TDI','5','Diesel','1','2015','800.00'),
+ ('Audi A6','AUDI','3.0 TDI',5,'Diesel',1,'2015',800.00),
 #17
- ('Audi A1','AUDI','1.9 TDI','5','Diesel','0','2014','500.00'),
+ ('Audi A1','AUDI','1.9 TDI',5,'Diesel',0,'2014',500.00),
 #18
- ('Mercedes C klasa','Mercedes-Benz','1.8 TDI','5','Disele','1','2016','1000.00'),
+ ('Mercedes C klasa','Mercedes-Benz','1.8 TDI',5,'Disele',1,'2016',1000.00),
 #19
- ('Mercedes E klasa','Mercedes-Benz','2.2 TDI','5','Disele','1','2016','1200.00'),
+ ('Mercedes E klasa','Mercedes-Benz','2.2 TDI',5,'Disele',1,'2016',1200.00),
 #20
- ('Mercedes A klasa','Mercedes-Benz','1.8 TDI','5','Disele','1','2015','850.00'),
+ ('Mercedes A klasa','Mercedes-Benz','1.8 TDI',5,'Disele',1,'2015',850.00),
 #21
- ('Hyundai i10','Hyundai','1.0 TDI','5','Diesel','0','2012','250.00'),
+ ('Hyundai i10','Hyundai','1.0 TDI',5,'Diesel',0,'2012',250.00),
 #22
- ('Hyundai i20','Hyundai','1.2 TDI','5','Diesel','0','2012','290.00'),
+ ('Hyundai i20','Hyundai','1.2 TDI',5,'Diesel',0,'2012',290.00),
 #23
- ('Suzuki Vitara','Suzuki','2.0','5', 'Benzin','0','2016','570.00'),
+ ('Suzuki Vitara','Suzuki','2.0',5, 'Benzin',0,'2016',570.00),
 #24
- ('Suzuki Swift ','Suzuki','1.6','5', 'Benzin','0','2012','370.00'),
+ ('Suzuki Swift ','Suzuki','1.6',5, 'Benzin',0,'2012',370.00),
 #25
-('Ford Fiesta ','Ford','1.0 i','5', 'Benzin','0','2012','270.00'),
+('Ford Fiesta ','Ford','1.0 i',5, 'Benzin',0,'2012',270.00),
 #26
-('Ford C-Max ','Ford','1.6','5', 'Benzin','0','2012','320.00'),
+('Ford C-Max ','Ford','1.6',5, 'Benzin',0,'2012',320.00),
 #27
-('Ford Transit','Ford','1.6 TDCI','5', 'Diesel','0','2015','950.00'),
+('Ford Transit','Ford','1.6 TDCI',5, 'Diesel',0,'2015',950.00),
 #28
-('BMW serija 1','BMW','1.8 i','5', 'Benzin','1','2012','550.00'),
+('BMW serija 1','BMW','1.8 i',5, 'Benzin',1,'2012',550.00),
 #29
-('BMW serija 5','BMW','3.0 d','5', 'Diesel','1','2014','850.00'),
+('BMW serija 5','BMW','3.0 d',5, 'Diesel',1,'2014',850.00),
 #30
-('Mini O ne ','Mini','1.8 ','5', 'Diesel','0','2011','500.00');
+('Mini O ne ','Mini','1.8 ',5, 'Diesel',0,'2011',500.00);
 
 
 
